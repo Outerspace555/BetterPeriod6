@@ -30,6 +30,8 @@ Partial Class Form1
         Me.ColorDialog1 = New System.Windows.Forms.ColorDialog()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
+        Me.Button6 = New System.Windows.Forms.Button()
+        Me.Button7 = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -95,11 +97,33 @@ Partial Class Form1
         Me.Button5.Text = "Rectangle"
         Me.Button5.UseVisualStyleBackColor = False
         '
+        'Button6
+        '
+        Me.Button6.BackColor = System.Drawing.Color.Coral
+        Me.Button6.Location = New System.Drawing.Point(715, 264)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(43, 34)
+        Me.Button6.TabIndex = 7
+        Me.Button6.Text = "Arc"
+        Me.Button6.UseVisualStyleBackColor = False
+        '
+        'Button7
+        '
+        Me.Button7.BackColor = System.Drawing.Color.Coral
+        Me.Button7.Location = New System.Drawing.Point(715, 306)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(43, 34)
+        Me.Button7.TabIndex = 8
+        Me.Button7.Text = "Ellipse"
+        Me.Button7.UseVisualStyleBackColor = False
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(830, 450)
+        Me.Controls.Add(Me.Button7)
+        Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.TrackBar1)
@@ -124,4 +148,6 @@ Partial Class Form1
     Friend WithEvents ColorDialog1 As ColorDialog
     Friend WithEvents Button4 As Button
     Friend WithEvents Button5 As Button
+    Friend WithEvents Button6 As Button
+    Friend WithEvents Button7 As Button
 End Class

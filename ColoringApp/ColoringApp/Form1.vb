@@ -15,6 +15,9 @@
         If m_Previous IsNot Nothing Then
             Dim d As Object
 
+            d = New Line(PictureBox1.Image, m_Previous, e.Location)
+            d.Pen = New Pen(c, w)
+
             If type = "Line" Then
                 d = New Line(PictureBox1.Image, m_Previous, e.Location)
                 d.Pen = New Pen(c, w)
@@ -23,7 +26,14 @@
                 d = New Rect(PictureBox1.Image, m_Previous, e.Location)
                 d.Pen = New Pen(c, w)
             End If
-
+            If type = "Arc" Then
+                d = New Arc(PictureBox1.Image, m_Previous, e.Location)
+                d.Pen = New Pen(c, w)
+            End If
+            If type = "Ellipse" Then
+                d = New Ellipse(PictureBox1.Image, m_Previous, e.Location)
+                d.Pen = New Pen(c, w)
+            End If
             m_shapes.Add(d)
             PictureBox1.Invalidate()
             m_Previous = e.Location
@@ -75,5 +85,13 @@
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
         type = "Rectangle"
+    End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        type = "Arc"
+    End Sub
+
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+        type = "Ellipse"
     End Sub
 End Class
