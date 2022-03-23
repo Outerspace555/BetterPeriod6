@@ -28,6 +28,8 @@ Partial Class Form1
         Me.Button3 = New System.Windows.Forms.Button()
         Me.TrackBar1 = New System.Windows.Forms.TrackBar()
         Me.ColorDialog1 = New System.Windows.Forms.ColorDialog()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Button5 = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -42,7 +44,7 @@ Partial Class Form1
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(666, 219)
+        Me.Button1.Location = New System.Drawing.Point(666, 215)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(27, 23)
         Me.Button1.TabIndex = 1
@@ -73,11 +75,33 @@ Partial Class Form1
         Me.TrackBar1.Size = New System.Drawing.Size(104, 45)
         Me.TrackBar1.TabIndex = 4
         '
+        'Button4
+        '
+        Me.Button4.BackColor = System.Drawing.Color.Coral
+        Me.Button4.Location = New System.Drawing.Point(666, 264)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(43, 36)
+        Me.Button4.TabIndex = 5
+        Me.Button4.Text = "Line"
+        Me.Button4.UseVisualStyleBackColor = False
+        '
+        'Button5
+        '
+        Me.Button5.BackColor = System.Drawing.Color.Coral
+        Me.Button5.Location = New System.Drawing.Point(666, 306)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(43, 34)
+        Me.Button5.TabIndex = 6
+        Me.Button5.Text = "Rectangle"
+        Me.Button5.UseVisualStyleBackColor = False
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(830, 450)
+        Me.Controls.Add(Me.Button5)
+        Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.TrackBar1)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
@@ -98,4 +122,6 @@ Partial Class Form1
     Friend WithEvents Button3 As Button
     Friend WithEvents TrackBar1 As TrackBar
     Friend WithEvents ColorDialog1 As ColorDialog
+    Friend WithEvents Button4 As Button
+    Friend WithEvents Button5 As Button
 End Class
