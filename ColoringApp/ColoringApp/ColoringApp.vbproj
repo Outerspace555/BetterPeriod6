@@ -75,6 +75,7 @@
   <ItemGroup>
     <Compile Include="Arc.vb" />
     <Compile Include="Ellipse.vb" />
+    <Compile Include="Polygon.vb" />
     <Compile Include="Rect.vb" />
     <Compile Include="Line.vb" />
     <Compile Include="Form1.vb">

@@ -34,6 +34,10 @@
                 d = New Ellipse(PictureBox1.Image, m_Previous, e.Location)
                 d.Pen = New Pen(c, w)
             End If
+            If type = "Polygon" Then
+                d = New Polygon(PictureBox1.Image, m_Previous, e.Location)
+                d.Pen = New Pen(c, w)
+            End If
             m_shapes.Add(d)
             PictureBox1.Invalidate()
             m_Previous = e.Location
@@ -93,5 +97,9 @@
 
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
         type = "Ellipse"
+    End Sub
+
+    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
+        type = "Polygon"
     End Sub
 End Class
