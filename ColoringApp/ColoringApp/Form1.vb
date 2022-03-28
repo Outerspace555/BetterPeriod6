@@ -102,4 +102,13 @@
     Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
         type = "Polygon"
     End Sub
+
+    Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
+        SaveFileDialog1.ShowDialog()
+    End Sub
+
+    Private Sub SaveFileDialog1_FileOk(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles SaveFileDialog1.FileOk
+        PictureBox1.Image.Save(SaveFileDialog1.FileName)
+
+    End Sub
 End Class

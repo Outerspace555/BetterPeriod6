@@ -33,6 +33,8 @@ Partial Class Form1
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Button7 = New System.Windows.Forms.Button()
         Me.Button8 = New System.Windows.Forms.Button()
+        Me.Button9 = New System.Windows.Forms.Button()
+        Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -128,11 +130,24 @@ Partial Class Form1
         Me.Button8.Text = "Polygon"
         Me.Button8.UseVisualStyleBackColor = False
         '
+        'Button9
+        '
+        Me.Button9.Location = New System.Drawing.Point(666, 405)
+        Me.Button9.Name = "Button9"
+        Me.Button9.Size = New System.Drawing.Size(75, 23)
+        Me.Button9.TabIndex = 10
+        Me.Button9.Text = "Save"
+        Me.Button9.UseVisualStyleBackColor = True
+        '
+        'SaveFileDialog1
+        '
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(830, 450)
+        Me.Controls.Add(Me.Button9)
         Me.Controls.Add(Me.Button8)
         Me.Controls.Add(Me.Button7)
         Me.Controls.Add(Me.Button6)
@@ -163,4 +178,6 @@ Partial Class Form1
     Friend WithEvents Button6 As Button
     Friend WithEvents Button7 As Button
     Friend WithEvents Button8 As Button
+    Friend WithEvents Button9 As Button
+    Friend WithEvents SaveFileDialog1 As SaveFileDialog
 End Class
