@@ -38,6 +38,10 @@
                 d = New Polygon(PictureBox1.Image, m_Previous, e.Location)
                 d.Pen = New Pen(c, w)
             End If
+            If type = "Picture" Then
+                d = New PBox(PictureBox1.Image, m_Previous, e.Location)
+                d.picture = PictureBox2.Image
+            End If
             m_shapes.Add(d)
             PictureBox1.Invalidate()
             m_Previous = e.Location
@@ -110,5 +114,13 @@
     Private Sub SaveFileDialog1_FileOk(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles SaveFileDialog1.FileOk
         PictureBox1.Image.Save(SaveFileDialog1.FileName)
 
+    End Sub
+
+    Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
+        type = "Pentagon"
+    End Sub
+
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
+        type = "Picture"
     End Sub
 End Class
