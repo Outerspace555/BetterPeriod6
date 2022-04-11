@@ -42,6 +42,7 @@ Partial Class Form1
         Me.Button11 = New System.Windows.Forms.Button()
         Me.Button12 = New System.Windows.Forms.Button()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.Button13 = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -136,7 +137,7 @@ Partial Class Form1
         Me.Button8.Name = "Button8"
         Me.Button8.Size = New System.Drawing.Size(43, 34)
         Me.Button8.TabIndex = 9
-        Me.Button8.Text = "Polygon"
+        Me.Button8.Text = "Triangle"
         Me.Button8.UseVisualStyleBackColor = False
         '
         'Button9
@@ -209,11 +210,20 @@ Partial Class Form1
         Me.CheckBox1.Text = "Fill"
         Me.CheckBox1.UseVisualStyleBackColor = True
         '
+        'Button13
+        '
+        Me.Button13.Location = New System.Drawing.Point(699, 215)
+        Me.Button13.Name = "Button13"
+        Me.Button13.Size = New System.Drawing.Size(27, 23)
+        Me.Button13.TabIndex = 19
+        Me.Button13.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(830, 450)
+        Me.Controls.Add(Me.Button13)
         Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.Button12)
         Me.Controls.Add(Me.Button11)
@@ -261,4 +271,5 @@ Partial Class Form1
     Friend WithEvents Button11 As Button
     Friend WithEvents Button12 As Button
     Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents Button13 As Button
 End Class

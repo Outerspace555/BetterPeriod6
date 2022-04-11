@@ -27,6 +27,8 @@
             If type = "Rectangle" Then
                 d = New Rect(PictureBox1.Image, m_Previous, e.Location)
                 d.fill = CheckBox1.Checked
+                d.color1 = Button1.BackColor
+                d.color2 = Button13.BackColor
                 d.Pen = New Pen(c, w)
                 d.xSpeed = SpeedTrackBar.Value
             End If
@@ -48,7 +50,11 @@
             End If
             If type = "Figure8" Then
                 d = New Figure8(PictureBox1.Image, m_Previous, e.Location)
+                d.fill = CheckBox1.Checked
+                d.color1 = Button1.BackColor
+                d.color2 = Button13.BackColor
                 d.Pen = New Pen(c, w)
+                d.xSpeed = SpeedTrackBar.Value
             End If
             If type = "8" Then
                 d = New _8(PictureBox1.Image, m_Previous, e.Location)
@@ -147,5 +153,11 @@
 
     Private Sub Button12_Click(sender As Object, e As EventArgs) Handles Button12.Click
         type = "8"
+    End Sub
+
+    Private Sub Button13_Click(sender As Object, e As EventArgs) Handles Button13.Click
+        ColorDialog1.ShowDialog()
+        c = ColorDialog1.Color
+        Button13.BackColor = c
     End Sub
 End Class
