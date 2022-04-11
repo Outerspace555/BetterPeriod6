@@ -38,9 +38,14 @@ Partial Class Form1
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
         Me.Button10 = New System.Windows.Forms.Button()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.SpeedTrackBar = New System.Windows.Forms.TrackBar()
+        Me.Button11 = New System.Windows.Forms.Button()
+        Me.Button12 = New System.Windows.Forms.Button()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SpeedTrackBar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PictureBox1
@@ -87,7 +92,7 @@ Partial Class Form1
         'Button4
         '
         Me.Button4.BackColor = System.Drawing.Color.Coral
-        Me.Button4.Location = New System.Drawing.Point(666, 264)
+        Me.Button4.Location = New System.Drawing.Point(666, 244)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(43, 36)
         Me.Button4.TabIndex = 5
@@ -97,7 +102,7 @@ Partial Class Form1
         'Button5
         '
         Me.Button5.BackColor = System.Drawing.Color.Coral
-        Me.Button5.Location = New System.Drawing.Point(666, 306)
+        Me.Button5.Location = New System.Drawing.Point(666, 286)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(43, 34)
         Me.Button5.TabIndex = 6
@@ -107,7 +112,7 @@ Partial Class Form1
         'Button6
         '
         Me.Button6.BackColor = System.Drawing.Color.Coral
-        Me.Button6.Location = New System.Drawing.Point(666, 346)
+        Me.Button6.Location = New System.Drawing.Point(666, 326)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(43, 34)
         Me.Button6.TabIndex = 7
@@ -117,7 +122,7 @@ Partial Class Form1
         'Button7
         '
         Me.Button7.BackColor = System.Drawing.Color.Coral
-        Me.Button7.Location = New System.Drawing.Point(715, 266)
+        Me.Button7.Location = New System.Drawing.Point(715, 246)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(43, 34)
         Me.Button7.TabIndex = 8
@@ -127,7 +132,7 @@ Partial Class Form1
         'Button8
         '
         Me.Button8.BackColor = System.Drawing.Color.Coral
-        Me.Button8.Location = New System.Drawing.Point(715, 306)
+        Me.Button8.Location = New System.Drawing.Point(715, 286)
         Me.Button8.Name = "Button8"
         Me.Button8.Size = New System.Drawing.Size(43, 34)
         Me.Button8.TabIndex = 9
@@ -149,7 +154,7 @@ Partial Class Form1
         'Button10
         '
         Me.Button10.BackColor = System.Drawing.Color.Coral
-        Me.Button10.Location = New System.Drawing.Point(715, 346)
+        Me.Button10.Location = New System.Drawing.Point(715, 326)
         Me.Button10.Name = "Button10"
         Me.Button10.Size = New System.Drawing.Size(43, 34)
         Me.Button10.TabIndex = 11
@@ -166,11 +171,53 @@ Partial Class Form1
         Me.PictureBox2.TabIndex = 14
         Me.PictureBox2.TabStop = False
         '
+        'SpeedTrackBar
+        '
+        Me.SpeedTrackBar.Location = New System.Drawing.Point(666, 149)
+        Me.SpeedTrackBar.Minimum = -10
+        Me.SpeedTrackBar.Name = "SpeedTrackBar"
+        Me.SpeedTrackBar.Size = New System.Drawing.Size(104, 45)
+        Me.SpeedTrackBar.TabIndex = 15
+        '
+        'Button11
+        '
+        Me.Button11.BackColor = System.Drawing.Color.Coral
+        Me.Button11.Location = New System.Drawing.Point(666, 365)
+        Me.Button11.Name = "Button11"
+        Me.Button11.Size = New System.Drawing.Size(43, 34)
+        Me.Button11.TabIndex = 16
+        Me.Button11.Text = "Figure 8"
+        Me.Button11.UseVisualStyleBackColor = False
+        '
+        'Button12
+        '
+        Me.Button12.BackColor = System.Drawing.Color.Coral
+        Me.Button12.Location = New System.Drawing.Point(715, 365)
+        Me.Button12.Name = "Button12"
+        Me.Button12.Size = New System.Drawing.Size(43, 34)
+        Me.Button12.TabIndex = 17
+        Me.Button12.Text = "8"
+        Me.Button12.UseVisualStyleBackColor = False
+        '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Location = New System.Drawing.Point(59, 378)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(38, 17)
+        Me.CheckBox1.TabIndex = 18
+        Me.CheckBox1.Text = "Fill"
+        Me.CheckBox1.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(830, 450)
+        Me.Controls.Add(Me.CheckBox1)
+        Me.Controls.Add(Me.Button12)
+        Me.Controls.Add(Me.Button11)
+        Me.Controls.Add(Me.SpeedTrackBar)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Button10)
         Me.Controls.Add(Me.Button9)
@@ -189,6 +236,7 @@ Partial Class Form1
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SpeedTrackBar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -209,4 +257,8 @@ Partial Class Form1
     Friend WithEvents SaveFileDialog1 As SaveFileDialog
     Friend WithEvents Button10 As Button
     Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents SpeedTrackBar As TrackBar
+    Friend WithEvents Button11 As Button
+    Friend WithEvents Button12 As Button
+    Friend WithEvents CheckBox1 As CheckBox
 End Class

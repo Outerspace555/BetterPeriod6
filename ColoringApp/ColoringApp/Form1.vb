@@ -17,14 +17,18 @@
 
             d = New Line(PictureBox1.Image, m_Previous, e.Location)
             d.Pen = New Pen(c, w)
+            d.xSpeed = SpeedTrackBar.Value
 
             If type = "Line" Then
                 d = New Line(PictureBox1.Image, m_Previous, e.Location)
                 d.Pen = New Pen(c, w)
+                d.xSpeed = Speedtrackbar.Value
             End If
             If type = "Rectangle" Then
                 d = New Rect(PictureBox1.Image, m_Previous, e.Location)
+                d.fill = CheckBox1.Checked
                 d.Pen = New Pen(c, w)
+                d.xSpeed = SpeedTrackBar.Value
             End If
             If type = "Arc" Then
                 d = New Arc(PictureBox1.Image, m_Previous, e.Location)
@@ -42,6 +46,19 @@
                 d = New PBox(PictureBox1.Image, m_Previous, e.Location)
                 d.picture = PictureBox2.Image
             End If
+            If type = "Figure8" Then
+                d = New Figure8(PictureBox1.Image, m_Previous, e.Location)
+                d.Pen = New Pen(c, w)
+            End If
+            If type = "8" Then
+                d = New _8(PictureBox1.Image, m_Previous, e.Location)
+                d.Pen = New Pen(c, w)
+            End If
+            If type = "Pentagon" Then
+                d = New Pentagon(PictureBox1.Image, m_Previous, e.Location)
+                d.Pen = New Pen(c, w)
+            End If
+
             m_shapes.Add(d)
             PictureBox1.Invalidate()
             m_Previous = e.Location
@@ -122,5 +139,13 @@
 
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
         type = "Picture"
+    End Sub
+
+    Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
+        type = "Figure8"
+    End Sub
+
+    Private Sub Button12_Click(sender As Object, e As EventArgs) Handles Button12.Click
+        type = "8"
     End Sub
 End Class
